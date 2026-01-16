@@ -1,0 +1,185 @@
+.circuits-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #667eea;
+    background: white;
+    color: #667eea;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #667eea;
+    color: white;
+}
+
+.circuits-list {
+    display: grid;
+    gap: 2rem;
+}
+
+.circuit-card {
+    display: flex;
+    gap: 2rem;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.circuit-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.circuit-icon {
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+}
+
+.circuit-info {
+    flex: 1;
+}
+
+.circuit-info h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.circuit-description {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.circuit-details {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.detail-item {
+    color: #555;
+    font-weight: 500;
+}
+
+.level-badge {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.level-badge.débutant {
+    background: #d4edda;
+    color: #155724;
+}
+
+.level-badge.intermédiaire {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.level-badge.avancé {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.circuit-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.details-btn,
+.reserve-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.details-btn {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.details-btn:hover {
+    background: #667eea;
+    color: white;
+}
+
+.reserve-btn {
+    background: #667eea;
+    color: white;
+    border: 2px solid #667eea;
+}
+
+.reserve-btn:hover {
+    background: #764ba2;
+    border-color: #764ba2;
+}
+
+@media (max-width: 768px) {
+    .circuit-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .circuit-icon {
+        margin: 0 auto;
+    }
+
+    .circuit-details {
+        justify-content: center;
+    }
+
+    .circuit-actions {
+        flex-direction: column;
+    }
+}
