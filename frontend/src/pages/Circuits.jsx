@@ -77,9 +77,6 @@ function Circuits() {
                             <div className="circuit-details">
                                 <span className="detail-item">📏 {circuit.distance}</span>
                                 <span className="detail-item">⏱️ {circuit.duration}</span>
-                                <span className={`level-badge ${circuit.level.toLowerCase()}`}>
-                                    {circuit.level}
-                                </span>
                             </div>
                             <div className="circuit-actions">
                                 <Link to={`/circuits/${circuit.id}`} className="details-btn">

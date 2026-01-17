@@ -1,56 +1,48 @@
 import { Link } from 'react-router-dom'
+import Card from '../components/Card'
 import './Home.css'
 
 function Home() {
+    const circuits = [
+        {
+            id: 1,
+            title: 'Route des Alpes',
+            description: '250 km • Niveau: Intermédiaire',
+            imageurl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop'
+        },
+        {
+            id: 2,
+            title: "Côte d'Azur",
+            description: '180 km • Niveau: Débutant',
+            imageurl: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop'
+        },
+        {
+            id: 3,
+            title: 'Forêt des Vosges',
+            description: '320 km • Niveau: Avancé',
+            imageurl: 'https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?w=400&h=300&fit=crop'
+        }
+    ]
+
     return (
         <div className="home">
             <section className="hero">
-                <div className="hero-content">
-                    <h1>Découvrez les Plus Beaux Circuits Moto</h1>
-                    <p>Vivez des expériences inoubliables sur les routes les plus spectaculaires</p>
-                    <Link to="/circuits" className="cta-button">Voir les Circuits</Link>
-                </div>
+                <h1>Découvrez les Plus Beaux Circuits Moto</h1>
+                <p>Vivez des expériences inoubliables sur les routes les plus spectaculaires</p>
+                <Link to="/circuits" className="cta-button">Voir les Circuits</Link>
             </section>
 
-            <section className="features">
-                <div className="feature-card">
-                    <div className="feature-icon">🏍️</div>
-                    <h3>Circuits Variés</h3>
-                    <p>Des parcours adaptés à tous les niveaux</p>
-                </div>
-                <div className="feature-card">
-                    <div className="feature-icon">🗺️</div>
-                    <h3>Itinéraires Détaillés</h3>
-                    <p>GPS et cartes pour chaque circuit</p>
-                </div>
-                <div className="feature-card">
-                    <div className="feature-icon">👥</div>
-                    <h3>Communauté Active</h3>
-                    <p>Rejoignez des passionnés comme vous</p>
-                </div>
-            </section>
-
-            <section className="popular-circuits">
+            <section className="circuits-section">
                 <h2>Circuits Populaires</h2>
-                <div className="circuits-grid">
-                    <div className="circuit-preview">
-                        <div className="circuit-image">🏔️</div>
-                        <h3>Route des Alpes</h3>
-                        <p>250 km • Niveau: Intermédiaire</p>
-                        <Link to="/circuits/1" className="view-button">Voir Détails</Link>
-                    </div>
-                    <div className="circuit-preview">
-                        <div className="circuit-image">🌊</div>
-                        <h3>Côte d'Azur</h3>
-                        <p>180 km • Niveau: Débutant</p>
-                        <Link to="/circuits/2" className="view-button">Voir Détails</Link>
-                    </div>
-                    <div className="circuit-preview">
-                        <div className="circuit-image">🌲</div>
-                        <h3>Forêt des Vosges</h3>
-                        <p>320 km • Niveau: Avancé</p>
-                        <Link to="/circuits/3" className="view-button">Voir Détails</Link>
-                    </div>
+                <div className="cards-container">
+                    {circuits.map(circuit => (
+                        <Card
+                            key={circuit.id}
+                            title={circuit.title}
+                            description={circuit.description}
+                            imageurl={circuit.imageurl}
+                        />
+                    ))}
                 </div>
             </section>
         </div>

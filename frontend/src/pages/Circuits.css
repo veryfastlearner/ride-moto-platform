@@ -57,7 +57,7 @@
     background: white;
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 20px 20px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -113,20 +113,7 @@
     font-size: 0.9rem;
 }
 
-.level-badge.débutant {
-    background: #d4edda;
-    color: #155724;
-}
 
-.level-badge.intermédiaire {
-    background: #fff3cd;
-    color: #856404;
-}
-
-.level-badge.avancé {
-    background: #f8d7da;
-    color: #721c24;
-}
 
 .circuit-actions {
     display: flex;
