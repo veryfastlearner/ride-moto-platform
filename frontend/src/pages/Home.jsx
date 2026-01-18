@@ -1,32 +1,36 @@
 import { Link } from 'react-router-dom'
 import Card from '../components/Card'
 import './Home.css'
+import routeAinDraham from '../assets/circuits/route-de-ain-draham.jpg'
+import routeCentraleDesert from '../assets/circuits/route-sidi.jpg'
+import routeAtlas from '../assets/circuits/kef.jpeg'
+import hero from '../assets/hero.jpg'
 
 function Home() {
     const circuits = [
         {
             id: 1,
-            title: 'Route des Alpes',
-            description: '250 km • Niveau: Intermédiaire',
-            imageurl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop'
+            title: 'Ciruit Nord',
+            description: 'Route: Tunis → Béja → Ain Draham → Tabarka → Bizerte → Tunis',
+            imageurl: routeAinDraham
         },
         {
             id: 2,
-            title: "Côte d'Azur",
-            description: '180 km • Niveau: Débutant',
-            imageurl: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop'
+            title: "Centrale et Desert",
+            description: 'Route: Sousse → Kairouan → Sidi Bouzid → Tozeur → Douz → Matmata → Gabès → Sfax.',
+            imageurl: routeCentraleDesert
         },
         {
             id: 3,
-            title: 'Forêt des Vosges',
-            description: '320 km • Niveau: Avancé',
-            imageurl: 'https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?w=400&h=300&fit=crop'
+            title: 'Atlas Mountain Ride',
+            description: 'Route: Kasserine → Thala → Djebel Chambi → Maktar → Le Kef.',
+            imageurl: routeAtlas
         }
     ]
 
     return (
         <div className="home">
-            <section className="hero">
+            <section className="hero" style={{ backgroundImage: `url(${hero})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <h1>Découvrez les Plus Beaux Circuits Moto</h1>
                 <p>Vivez des expériences inoubliables sur les routes les plus spectaculaires</p>
                 <Link to="/circuits" className="cta-button">Voir les Circuits</Link>

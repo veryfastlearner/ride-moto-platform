@@ -4,7 +4,7 @@ import './Header.css'
 function Header() {
     return (
         <header className="header">
-            <Link to="/" className="logo">🏍️ RideMoto</Link>
+            <Link to="/" className="logo">Mototourism</Link>
             <nav>
                 <ul>
                     <li><Link to="/">Accueil</Link></li>
