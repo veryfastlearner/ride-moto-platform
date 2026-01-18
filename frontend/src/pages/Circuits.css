@@ -1,13 +1,11 @@
 .circuits-page {
+    width: 100%;
+}
+
+.circuits-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-}
-
-.page-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 2rem 0;
 }
 
 .page-header h1 {
